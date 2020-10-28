@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div id="alert-box"></div>
+    <div id="image-box"></div>
+    <br>
+    <form action="" id="upload-form">
+        {% csrf_token %}
+        {{form.as_p}}
+    </form>
+    <br>
+    <div id="progress-box" class="not-visible">progress</div>
+    <div id="cancel-box" class="not-visible">
+        <button id="cancel-btn" class="btn btn-danger">cancel</button>
+    </div>
+
+{% endblock content %}
+
